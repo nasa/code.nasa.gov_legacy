@@ -1,0 +1,382 @@
+/*
+Theme Name:         code.nasa.gov alpha
+Theme URI:          http://code.nasa.gov
+Description:        Simple basic code site for Wordpress.
+Version:            0.0.4
+Author:             Sean Herron
+Author URI:         http://about.me/seanherron
+
+License:            The Unlicense
+License URI:        http://unlicense.org/
+*/
+
+
+
+.clearfix {
+&:before { content:''; display:block; }
+&:after { content:''; display:table; clear:both; }
+zoom:1;
+}
+
+h2 {
+	font-size:1.2em;
+}
+.hidden {
+	display:none;
+}
+
+header {
+	.clearfix;
+	margin-bottom:2.5em;
+	margin-top:2em;
+}
+header h1 img {
+	float:left;
+}
+nav {
+	position:relative;
+	top:1em;
+	float:right;
+	ul {
+		list-style-type:none;
+		margin:0;
+		li {
+			display:inline;
+			background:#e3e3e3;
+			cursor:pointer;
+			border-radius:0.3em;
+			&:hover {
+				background:#005494;
+				a {
+					color:white;
+				}
+			}
+			padding:1em;
+			padding-top:0.5em;
+			padding-bottom:0.5em;
+			a {
+				color:#575757;
+				&:hover {
+					text-decoration:none;
+				}
+			}
+		}
+	}
+}
+
+@subtle: #ffffff;
+@raised: lighten(#edd, 1%);
+@raised_highlight: darken(@raised, 5%);
+
+footer[role="contentinfo"] {
+	background:@subtle;
+	width:100%;	
+	font-size:1em;
+	border:none;
+	position:relative;
+	top:2em;
+	
+	div.nasainfo {
+		background:url('meatball.png');
+		background-repeat:no-repeat;
+		background-size:auto 4em;
+		background-position:left center;
+		padding-left:5em;
+		float:left;
+		width:50%;
+		margin-bottom:2em;
+		margin-top:-2em;
+		dl {
+			font-size:0.85em;
+			position:relative;
+			top:0.6em;
+		}
+		dt {
+			float:left;
+			&:after {
+				display:inline-block;
+				content:":";
+				padding-right:0.3em;
+			}//after
+		}//dt
+	}//div.nasainfo
+	
+	div.openinfo {
+		float:right;
+		width:40%;
+		
+		a {
+			font-size:0.85em;
+			position:relative;
+			top:-5px;
+			
+			float:right;
+			background:#e3e3e3;
+			border-radius:0.3em;
+			padding:1em;
+			padding-top:0.5em;
+			padding-bottom:0.5em;
+			color:#575757;
+			&:hover {
+				background:#005494;
+				color:white;
+				text-decoration:none;
+			}
+		}
+		p {
+			margin-top:1.2em;
+			margin-bottom:0.1em;
+		}
+		ul {
+			list-style-type:none;
+			padding:0;
+			margin:0;
+			
+			li {
+				font-size:0.5em;
+				display:inline;
+				padding-right:0.3em;
+				&:before {
+					display:block;
+					content:"|";
+					margin-right:0.3em;
+				}//&:before
+				&:first-child{
+					&:before {
+						display:none;
+					}//&:before	
+				}//first-chiild
+			}//li
+		}//ul
+	}//div.openinfo
+}//footer
+
+input#s {
+	width:99%;
+	font-size:1.2em;
+	height:2em;
+}
+div.row {
+	border-bottom:1px solid #e3e3e3;
+	margin-bottom:2em;
+	&.first {
+		margin-top:2em;
+	}
+	p {
+		margin-bottom:1em;
+	}
+	&.interior {
+		border:0;
+	}
+}
+
+ul.black {
+	li{
+		color:#404040;
+		margin-bottom:2em;
+	}
+}
+
+div.hero-unit {
+	p {
+		font-size:1.1em;
+	}
+	h1 {
+		font-size:2em;
+	}
+	a.btn.primary.large {
+		font-size:0.9em;
+	}
+	padding-bottom:15px;
+	padding-top:30px;
+}
+article.project {
+	border-radius:5px;
+	border:1px solid #e3e3e3;
+	.clearfix();
+	margin-bottom:25px;
+	position:relative;
+	header {
+		margin:0;
+		border-bottom:1px solid #e3e3e3;
+		padding:10px;
+		position:relative;
+		div.share {
+			position:absolute;
+			right:5px;
+			top:25px;
+		}
+		h1 {
+			margin-bottom:5px;
+			width:75%;
+			font-size:2em;
+			a {
+				font-style:normal;
+				color:#005494;
+			}
+		}
+		a {
+			padding-left:5px;
+			font-style:italic;
+		}
+	}
+	div.content {
+		float:left;
+		width:70%;
+		padding:10px;
+		text-align:justify;
+		position:relative;
+		&:after {
+			display:block;
+			background:lighten(#e3e3e3,7%);
+			width:36.3%;
+			height:100%;
+			content:"hello";
+			position:absolute;
+			top:0;
+			right:-263px;
+			z-index:-1;
+			border-radius:5px 0px;
+		}
+	}
+	aside {
+		float:right;
+		width:25%;
+		background:lighten(#e3e3e3,7%);
+		padding:5px;
+		font-size:12px;
+		z-index:100;
+	}
+	
+	&.flag {
+		border-radius:5px 0px 0px 5px;
+	}
+	
+	div.flag {
+		position:absolute;
+		right:-20px;
+		top:-1px;
+		width:20px;
+		background:#e3e3e3;
+		height:100%;
+		z-index:100;
+		border-radius:0px 5px 5px 0px;
+		padding-top:2px;
+		img {
+			margin-top:15px;
+			margin-left:2.5px;
+		}
+		&:hover {
+			background:#005494;
+			a {
+				color:white;
+			}
+		}
+			a {
+				display:block;
+				writing-mode: tb-rl;
+				-webkit-transform: rotate(90deg);	
+				-moz-transform: rotate(90deg);
+				-ms-transform: rotate(90deg);
+				-o-transform: rotate(90deg);
+				transform: rotate(90deg);
+				color:#575757;
+				font-size:0.8em;
+				text-transform:uppercase;
+				margin-top:50px;
+				&:hover {
+					text-decoration:none;
+				}
+			}
+	}
+}
+
+
+a.fork {
+	display:inline-block;
+	background:#e3e3e3;
+	color:darken(#575757, 5%);
+	font-style:normal !important;
+	font-size:0.75em;
+	padding-right:5px;
+	border-radius:5px;
+	&:hover {
+		text-decoration:none;
+		background:#005494;
+		color:white;
+	}
+}
+
+ul.tags {
+	list-style-type:none;
+	margin:0;
+	margin-top:10px;
+	li {
+		float:left;
+		margin-right:7px;
+		a {
+			display:inline-block;
+			background:#e3e3e3;
+			color:darken(#575757, 5%);
+			font-style:normal;
+			font-size:0.75em;
+			padding-right:5px;
+			padding-left:5px;
+			border-radius:5px;
+			&:hover {
+				text-decoration:none;
+				background:#005494;
+				color:white;
+			}
+		}
+	}
+}
+
+div.noresults {
+	background:lighten(#e3e3e3,7%);
+	border-radius:5px;
+	border:1px solid #e3e3e3;
+	padding:10px;
+	padding-top:20px;
+	p {
+		text-align:center;
+		padding-bottom:20px;
+	}
+	ul.tweet_list {
+		list-style-type:none;
+		margin:0;
+		width:70%;
+		margin:0 auto;
+		li {
+			margin-bottom:20px;
+			img {
+				float:left;
+				margin-right:10px;
+				border:1px solid #e3e3e3;
+			}
+			
+			a.tweet_user {
+				font-weight:bold;
+			}
+			
+			span.tweet_time a {
+				font-style:italic;
+				font-size:0.8em;
+			}
+		}
+	}
+}
+
+div.navigation a {
+	background:#e3e3e3;
+	border-radius:0.3em;
+	padding:1em;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	color:#575757;
+	&:hover {
+		background:#005494;
+		color:white;
+		text-decoration:none;
+	}
+}
